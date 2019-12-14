@@ -1,0 +1,25 @@
+.button {
+  background-color: white; /* Green */
+  border: solid #4BADCD;
+  color: #4BADCD;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:600;
+  cursor: pointer;
+}
+
+/* .mini-button {
+  background-color: #FBADB8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:600;
+  border-radius: 10px;
+} */

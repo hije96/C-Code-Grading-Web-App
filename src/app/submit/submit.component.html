@@ -1,0 +1,57 @@
+<div style="position:fixed;height:100%;width:230px;background-color:#4BADCD;text-align:center;left:0px;top:0px">
+  <div style="background-color:#FBF1DE;width:140px;height:140px;border-radius:70px;display:inline-block;margin-top:200px">
+    <img [src]="imagePath" style="width:100px;height:100px;margin-top:20px">
+  </div>
+  <div style="padding:10px">
+    <p style="color:#FBF1DE;font-size:20px">{{this.student_id}}</p>
+  </div>
+  <div style="position:fixed;bottom:0px;width:230px">Icons made by
+    <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+     from
+    <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+  </div>
+</div>
+<div class="container">
+  <br>
+  <div style="border-bottom: 6px solid #676076;">
+    <p style="font-size:25px;margin:0px">코드 제출 : {{this.title}}</p>
+  </div>
+  <br>
+
+  <div style="width:100%;height:100%">
+    <textarea class="form-control" rows="25"
+    style="width:60%;float:left;margin-bottom:60px" placeholder="여기에 코드 복붙!" [(ngModel)]="code"></textarea>
+    <span style="height:300px;display:inline-block;width:40%;padding:0px 20px">
+      <span style="display:inline-block;width:100%;height:100%;padding:20px;
+      border-radius:10px;background-color:#DDCFCB;">
+        <!-- <p *ngIf="this.result=='PASS'" style="text-align:center;font-size:60px;color:green">PASS</p>
+        <p *ngIf="this.result=='FAIL'" style="text-align:center;font-size:60px;color:red">FAIL</p>
+        <p *ngIf="this.result=='ING'" style="text-align:center;font-size:60px;color:blue">체점 중</p> -->
+
+        <p *ngIf="this.result=='PASS'" style="text-align:center;font-size:60px;color:#6CC7D7">PASS</p>
+        <p *ngIf="this.result=='FAIL'" style="text-align:center;font-size:60px;color:#FD595D">FAIL</p>
+        <p *ngIf="this.result=='ING'" style="text-align:center;font-size:40px;color:#676076">체점 중..</p>
+        <p *ngIf="this.result=='COMPILE'" style="text-align:center;font-size:40px;color:#676076">컴파일 중..</p>
+        <p [innerHTML]="information"></p>
+      </span>
+    </span>
+    <span style="text-align:center;width:40%;display:inline-block;padding:20px">
+      <div type="button" class="button" style="width:100%"
+      (click)="btnClick1()">컴파일</div>
+    </span>
+
+    <span style="text-align:center;width:40%;display:inline-block;padding:20px">
+      <div type="button" class="button" style="width:100%"
+      (click)="btnClick2()">체점 하기</div>
+    </span>
+    <!-- <span style="margin-top:6px;border-style:groove;height:300px;display:inline-block;width:40%">b</span> -->
+  </div>
+
+
+  <div style="text-align:right;padding-right:20px">
+    <button type="button" class="mini-button"
+    [routerLink]="['/main']">목록</button>
+  </div>
+
+  <!-- <button [routerLink]="['/submit', id]">제출</button> -->
+</div>

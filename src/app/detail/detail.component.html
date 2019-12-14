@@ -1,0 +1,33 @@
+<div class="container">
+  <br>
+  <div style="border-bottom: 6px solid #6ED8E0;">
+    <p style="font-size:25px;margin:0px">문제</p>
+  </div>
+  <br>
+
+    <div style="border-style:groove;">
+    <table class="table" style="text-align:center;margin-bottom:0px">
+      <tbody>
+        <tr>
+          <td>{{task_id}}</td>
+          <td>{{title}}</td>
+          <td>{{deadline}}</td>
+          <td>PASS</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <br>
+
+    <div style="padding:0px 20px">
+      <h4 style="font-size:17px;line-height:35px"
+      [innerHTML]="content"></h4>
+    </div>
+
+  <div style="text-align:center">
+    <button type="button" class="btn btn-lg"
+    [routerLink]="['/submit', id]">제출</button>
+  <div>
+  <!-- <button [routerLink]="['/submit', id]">제출</button> -->
+</div>

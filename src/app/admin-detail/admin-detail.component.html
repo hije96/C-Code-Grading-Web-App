@@ -1,0 +1,25 @@
+<div style="position:absolute;left:0;width:100%">
+<div class="container">
+  <table class="table" style="text-align:center">
+    <thead>
+      <tr>
+        <th scope="col" style="text-align:center">학번</th>
+        <th scope="col" style="text-align:center"></th>
+        <th scope="col" style="text-align:center">제출 시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of submit_info">
+        <td>{{t.id}}</td>
+        <td *ngIf="t.pass==1" style="color:#6CC7D7;font-weight:600">PASS</td>
+        <td *ngIf="t.pass==0" style="color:#FD595D;font-weight:600">FAIL</td>
+        <td>{{parse(t.submit_time)}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="text-align:center">
+    <button type="button" class="mini-button" [routerLink]="['/admin/main']">뒤로</button>
+  </div>
+  <br><br>
+</div>
+</div>

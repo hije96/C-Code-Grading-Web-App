@@ -1,0 +1,22 @@
+<div style="position:absolute;left:0;width:100%">
+<div class="container">
+  <table class="table" style="text-align:center">
+    <thead>
+      <tr>
+        <th scope="col" style="text-align:center">No.</th>
+        <th scope="col" style="text-align:center">제목</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of tasks"  [routerLink]="['/admin/detail', t.task_id]"
+       style="cursor:pointer">
+        <td>{{t.task_no}}</td>
+        <td>{{t.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="text-align:center;margin-top:50px">
+    <button type="button" class="mini-button" [routerLink]="['/admin/add']">추가</button>
+  </div>
+</div>
+</div>
